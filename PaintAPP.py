@@ -9,7 +9,7 @@ def init():
     # title name
     pygame.display.set_caption("MyPaintApp")
     # background color= 'white'
-    screen.fill([255, 255, 255])
+    screen.fill([0, 0, 0])
     main_loop()
 
 
@@ -29,7 +29,7 @@ draw_on = False
 # a value for showing last position that mouse had been moving
 last_pos = None
 # line color
-color = (0, 0, 0)
+color = (255, 255, 255)
 # thickness of line
 radius = 8
 # a value that let program to continue (False means that "MyPaintApp" closed without saving
@@ -39,6 +39,7 @@ resume = False
 
 # return resume
 def return_resume():
+    global resume
     return resume
 
 
@@ -51,6 +52,7 @@ def main_loop():
             for event in pygame.event.get():
                 # if program closed by 'close button'
                 if event.type == pygame.QUIT:
+                    resume = False
                     raise StopIteration
                 # if you press keyboard buttons
                 if event.type == pygame.KEYDOWN:
