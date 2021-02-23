@@ -1,4 +1,4 @@
-# Itroduction
+# Introduction
 
 A number recognizer application with almost***95% accuracy***  written by ***Scikit-learn*** (sklearn) library as core of processes, ***pygame*** module used for draw app and ***Pillow*** library for editing images.
 
